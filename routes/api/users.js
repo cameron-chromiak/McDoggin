@@ -5,12 +5,16 @@ const bcrypt = require('bcryptjs');
 //User model
 const User = require('../../models/User');
 
+router.get('/test', (req, res) =>{
+  res.send('fs')
+})
+
 //@route GET /api/users/test
 //@desc
 //@access Public
 router.get('/register', (req, res)=>{
   let error = {}
-  user.findOne({email: req.body.email})
+  User.findOne({email: req.body.email})
   .then(user => {
     if(user){
       res.status(400).json({error: 'Email taken'})

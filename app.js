@@ -21,7 +21,7 @@ mongoose.connect(db, { useNewUrlParser: true })
 
 
 app.get('/', (req, res) =>{
-  res.send('.kjl')
+  res.send('')
 })
 
 //Use routes
